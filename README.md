@@ -1,4 +1,7 @@
-# MyApp
+# Custom Footer Directive
+
+## Description
+This mini project creates a custom directive which can be applied on HTML "footer". The directive gets an object as input data to dynamically populate footers's titles and links. 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
 
