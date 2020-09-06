@@ -1,4 +1,6 @@
 # AngularFormsProject
+## Angular Forms Project
+This mini project implements angular's template deriven and reactive froms, including dynamic form fields, custom form validation, and cross-field form validation. 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
 
