@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row" align="center">
+    <div class="col-sm-12">
+      <button class="btn btn-secondary mt-3" type="button" (click)="switchFormType($event)">Switch to {{formType}}</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <app-user-registration *ngIf="!chooseFormFlag"></app-user-registration>
+      <app-user-registration-reactive *ngIf="chooseFormFlag"></app-user-registration-reactive>
+    </div>
+  </div>
+</div>
