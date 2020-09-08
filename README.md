@@ -1,6 +1,5 @@
-# AngularFormsProject
 
-## APP_INITIALIZER Project
+# APP_INITIALIZER Project
 A mini Angular project that implements the APP_INITIALIZER feature of the Angular framework. This feature allows us to load some inital data required for applicaion sart up. It's specially useful when we use thired party login page to log into our anguar app and we need to make a back-end call before getting into the app. 
 
 ## Development server
