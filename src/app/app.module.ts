@@ -1,20 +1,28 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule, Title } from '@angular/platform-browser';
+import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { UserRegistrationComponent } from './user-registration/user-registration.component';
-import { UserRegistrationReactiveComponent } from './user-registration-reactive/user-registration-reactive.component';
 import { from } from 'rxjs';
+import { UserInfoComponent } from './components/user-info/user-info.component';
+import { UserService } from './services/user.service';
+export function getUserInfo(userService: UserService) {
+  return (): Promise<any> => userService.getUserInfo();
+}
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    UserRegistrationComponent,
-    UserRegistrationReactiveComponent,
-  ],
+  declarations: [AppComponent, UserInfoComponent],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule],
-  providers: [],
+  providers: [
+    Title,
+    UserService,
+    {
+      provide: APP_INITIALIZER,
+      useFactory: getUserInfo,
+      deps: [UserService],
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

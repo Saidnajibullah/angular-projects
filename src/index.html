@@ -1,13 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>AngularFormsProject</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularFormsProject</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <style>
+      .spinner-container {
+        background-color: antiquewhite;
+        height: 100vh;
+      }
+      .spinner {
+        position: relative;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <app-root>
+      <div class="d-flex justify-content-center spinner-container">
+        <div class="spinner-border spinner" role="status"></div>
+      </div>
+    </app-root>
+  </body>
 </html>
